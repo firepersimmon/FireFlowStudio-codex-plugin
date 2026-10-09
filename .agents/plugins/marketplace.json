@@ -1,0 +1,20 @@
+{
+  "name": "fireflowstudio",
+  "interface": {
+    "displayName": "FireFlowStudio Plugins"
+  },
+  "plugins": [
+    {
+      "name": "fireflowstudio",
+      "source": {
+        "source": "local",
+        "path": "./plugins/fireflowstudio"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

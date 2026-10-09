@@ -1,0 +1,30 @@
+{
+  "name": "fireflowstudio",
+  "version": "0.1.0",
+  "description": "连接 FireFlowStudio 工作台，管理资产、剧本和图片视频生成任务。",
+  "author": {
+    "name": "FireFlowStudio",
+    "url": "https://www.persfireai.com"
+  },
+  "homepage": "https://www.persfireai.com",
+  "repository": "https://github.com/firepersimmon/FireFlowStudio-codex-plugin",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "FireFlowStudio",
+    "shortDescription": "资产、剧本和图片视频生成工作台",
+    "longDescription": "连接你的 FireFlowStudio 账号，在 Codex 中做完整的视觉创作。可用工具由连接的 FireFlowStudio MCP 服务提供。",
+    "developerName": "FireFlowStudio",
+    "category": "Creativity",
+    "capabilities": ["Read", "Write", "Interactive"],
+    "brandColor": "#694BFF",
+    "websiteURL": "https://www.persfireai.com",
+    "logo": "./assets/favicon.ico",
+    "composerIcon": "./assets/favicon.ico",
+    "defaultPrompt": [
+      "查看我在 FireFlowStudio 中的项目和资产",
+      "帮我整理 FireFlowStudio 中的剧本和制作流程",
+      "查看 FireFlowStudio 图片和视频生成任务的进度"
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

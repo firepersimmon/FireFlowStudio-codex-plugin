@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "fireflowstudio": {
+      "type": "http",
+      "url": "https://localhost:8038/mcp",
+      "tool_timeout_sec": 120
+    }
+  }
+}
