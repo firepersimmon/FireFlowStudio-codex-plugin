@@ -4,7 +4,7 @@ FireFlowStudio 的 Codex 插件目录，提供一个插件：[`fireflowstudio`](
 
 | 安装标识 | 展示名 | 连接地址 | 版本 |
 | --- | --- | --- | --- |
-| `fireflowstudio` | FireFlowStudio | `https://localhost:8038/mcp` | `0.1.0` |
+| `fireflowstudio` | FireFlowStudio | `http://localhost:8038/mcp` | `0.1.0` |
 
 接入方式是 Codex 原生 HTTP Remote MCP：插件不预置 client ID、回调地址或凭据，也不含本地 server，客户端按服务端 OAuth 元数据完成注册与登录。
 
