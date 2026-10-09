@@ -1,29 +1,39 @@
-# FireFlowStudio Marketplace
+# FireFlowStudio for Codex
 
-FireFlowStudio 的 Codex 插件目录，提供一个插件：[`fireflowstudio`](plugins/fireflowstudio)。在 Codex 中连接 FireFlowStudio 工作台，管理资产、生成剧本、推进剧本流程，并完成美术资产图片生成和视频生成。
+在 Codex 中连接 FireFlowStudio 工作台，通过对话处理项目、资产、剧本和图片视频生成任务。具体可用操作以连接后提供的工具和你授予的权限为准。
 
-| 安装标识 | 展示名 | 连接地址 | 版本 |
-| --- | --- | --- | --- |
-| `fireflowstudio` | FireFlowStudio | `http://localhost:8038/mcp` | `0.1.0` |
-
-接入方式是 Codex 原生 HTTP Remote MCP：插件不预置 client ID、回调地址或凭据，也不含本地 server，客户端按服务端 OAuth 元数据完成注册与登录。
+- 插件名称：FireFlowStudio
+- 安装标识：`fireflowstudio@fireflowstudio`
+- 版本：`0.1.0`
+- [官方网站](https://www.persfireai.com)
 
 ## 安装
 
-本仓库公开可读，无需 GitHub 授权，本机 Git 能正常访问 GitHub 即可。
+在终端执行：
 
 ```bash
 codex plugin marketplace add https://github.com/firepersimmon/FireFlowStudio-codex-plugin.git --ref main
 codex plugin add fireflowstudio@fireflowstudio
 ```
 
-装完重新加载插件或新建 Codex 任务，在 MCP 连接管理里对 `fireflowstudio` 完成 FireFlowStudio OAuth 登录即可使用。每位使用者用自己的 FireFlowStudio 账号完成授权。
+安装后重新加载插件或新建 Codex 任务。
 
-也可以通过命令行发起登录：
+## 连接账号
 
-```bash
-codex mcp login fireflowstudio
-```
+1. 在 Codex 的 MCP 连接管理中找到 FireFlowStudio，发起登录。
+2. 在打开的浏览器页面中登录你的 FireFlowStudio 账号。
+3. 选择要授权的租户，并勾选允许应用使用的权限。
+4. 点击同意授权，完成后返回 Codex 即可继续使用。
+
+每位使用者使用自己的账号授权。你可以拒绝授权，也可以只选择需要的权限。应用实际可执行的操作仍受你在租户和项目中的业务权限限制。
+
+## 使用
+
+连接后，可以在对话中说明你要处理的项目和目标，例如：
+
+- 查看项目和资产。
+- 整理剧本与制作流程。
+- 查询图片或视频生成任务的进度。
 
 ## 更新
 
@@ -32,4 +42,4 @@ codex plugin marketplace upgrade fireflowstudio
 codex plugin add fireflowstudio@fireflowstudio
 ```
 
-更新后新建 Codex 任务验证。未授权时连接地址返回 `401` 并给出 `WWW-Authenticate: Bearer`，OAuth 资源元数据和授权服务器元数据端点返回 `200`，这是预期状态。
+更新后重新加载插件或新建 Codex 任务。如果 Codex 提示需要登录，按页面提示重新连接账号。
